@@ -1,0 +1,210 @@
+body 
+{
+background-color: rgb(91, 99, 99);
+}
+
+section
+{
+    width: 100%;
+    height: 85%;
+    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/31/161755-pixel_art-waterfall-Superbrothers_Sword_and_Sorcery_EP.jpg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+persos
+{
+    height: 80%;
+    display: flex;
+}
+
+.selection
+{
+    display: flex;
+    justify-content: center;
+}
+footer
+{
+    height: 15%;
+    flex-direction: column;
+    display: flex;
+    background-color: rgb(49, 49, 49);
+}
+
+ennemi
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    
+    height: 600px;
+    width: 200px;
+}
+
+imgEnnemi
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+imgperso
+{
+    display: flex;
+    width: 200px;
+    text-align: center;
+}
+
+hpEnnemi
+{
+    display: flex;
+    height: 200px;
+    width: 100px;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+}
+
+PVtxt
+{
+    display: flex;
+    height: 20px;
+    width: 90px;
+    flex-direction: column-reverse;
+}
+
+.pv
+{
+ display: flex;
+ height: 120px;
+ width: 100px;
+ align-items: center;
+}
+.pvGE
+{
+    display: flex;
+    height: 150px;
+    width: 10px;
+    background-color: rgb(255, 0, 0);
+    color: antiquewhite;
+}
+
+pvEnnemi
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+barreDeVie
+{
+    display: flex;
+    height: 100%;
+    width: 75px;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.pv_G
+{
+    display: flex;
+    height: 100px;
+    width: 10px;
+    background-color: lime;
+    
+}
+
+.button
+{
+    border: outset 3px rgb(255, 173, 51);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: rgb(241, 212, 81);
+    height: 25px;
+    width: 100px;
+    background-color: gray;
+}
+
+PVtxt
+{
+    color: azure;
+}
+
+.button:hover
+{
+    border: inset 3px rgb(230, 193, 139);
+    color: rgb(230, 186, 103);
+    background-color: rgb(172, 172, 172);
+}
+description
+{
+    color: rgb(20, 37, 114);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: solid;
+    text-shadow: 3px;
+    background-color: rgb(109, 184, 255);
+}
+Actions
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100px;
+}
+
+Attaque_Defense_Soins
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+Sort_Info_pass
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+imgPerso
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column-reverse;
+}
+
+perso
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+barreDeMana
+{
+    display: flex;
+    height: 100%;
+    width: 75px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mana
+{
+    display: flex;
+    background-color: aqua;
+    height: 100px;
+    width: 10px;
+}
+
+.mp 
+{
+    color: aliceblue;
+}
+
+.mana_P
+{
+    display: flex;
+    height: 120px;
+    width: 100px;
+    align-items: center;
+}

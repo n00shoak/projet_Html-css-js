@@ -1,0 +1,57 @@
+<body>    
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <script src="js.js" async></script>
+    <section>
+        <ennemi>
+            <imgEnnemi>
+                <imgEnnemi><img src="boss.gif" height="200" width="200" id="graphE"> </imgEnnemi>
+                <imgEnnemi><img src="boss.gif" height="200" width="200" id="graphF"> </imgEnnemi>
+                <imgEnnemi><img src="boss.gif" height="200" width="200" id="graphG"> </imgEnnemi>
+            </imgEnnemi>
+            <pvEnnemi>
+                <hpEnnemi><PVEgraph id = "Hp_E_Graph1" class="pvGE"></PVEgraph><PVtxt id="hpEnnemi1"> 100 hp</PVtxt></hpEnnemi>
+                <hpEnnemi><PVEgraph id = "Hp_E_Graph2" class="pvGE"></PVEgraph><PVtxt id="hpEnnemi2"> 100 hp</PVtxt></hpEnnemi>
+                <hpEnnemi><PVEgraph id = "Hp_E_Graph3" class="pvGE"></PVEgraph><PVtxt id="hpEnnemi3"> 100 hp</PVtxt></hpEnnemi>
+            </pvEnnemi>
+            
+        </ennemi>
+        <persos>
+            <imgPerso>
+                <perso><img src="pirateSlime.gif" height="160" width="160" id="perso_D">  <img src="slash.gif" height="160" width="100" id="slashD">  <img src="heal.gif" id="healD"  height="160" width="160"> <img src="shieldUp.gif" id="shieldD"  height="160" width="160"></perso>
+                <perso><img src="berserkSlime.gif"height="160" width="160" id="perso_C">  <img src="slash.gif" height="160" width="100" id="slashC">  <img src="heal.gif" id="healC"  height="160" width="160"> <img src="shieldUp.gif" id="shieldC"  height="160" width="160"></perso>
+                <perso><img src="witchSlime.gif" height="160" width="160" id="perso_B">  <img src="Spells.gif" height="160" width="100" id="slashB">  <img src="heal.gif" id="healB"  height="160" width="160"> <img src="shieldUp.gif" id="shieldB"  height="160" width="160"></perso>
+                <perso><img src = "palaslime.gif" height="160" width="160" id="perso_A">  <img src="slash.gif" height="160" width="100" id="slashA">  <img src="heal.gif" id="healA"  height="160" width="160"> <img src="shieldUp.gif" id="shieldA"  height="160" width="160"></perso>
+            </imgPerso>
+            <barreDeVie>
+                <pvA class="pv"><PVgraphA id = "hp_A_grph" class="pv_G"></PVgraphA><PVtxt id="hpA"></PVtxt></pvA>
+                <pvB class="pv"><PVgraphB id = "hp_B_grph" class="pv_G"></PVgraphB><PVtxt id="hpB"></PVtxt></pvB>
+                <pvC class="pv"><PVgraphC id = "hp_C_grph" class="pv_G"></PVgraphC><PVtxt id="hpC"></PVtxt></pvC>
+                <pvD class="pv"><PVgraphD id = "hp_D_grph" class="pv_G"></PVgraphD><PVtxt id="hpD"></PVtxt></pvD>
+            </barreDeVie>
+            <barreDeMana>
+                <mana class="mana_P"><mana_A_G class="mana" id = "mana_A_G"></mana_A_G><mana_A_T id="mana_A_T" class="MP"> MP</mana_A_T></mana>
+                <mana class="mana_P"><mana_B_G class="mana" id = "mana_B_G"></mana_B_G><mana_B_T id="mana_B_T" class="MP"> MP </mana_B_T></mana>
+                <mana class="mana_P"><mana_C_G class="mana" id = "mana_C_G"></mana_C_G><mana_C_T id="mana_C_T" class="MP"> MP </mana_C_T></mana>
+                <mana class="mana_P"><mana_D_G class="mana" id = "mana_D_G"></mana_D_G><mana_D_T id="mana_D_T" class="MP"> MP </mana_D_T></mana>
+            </barreDeMana>
+
+        </persos>
+    </section>
+    <footer>
+        <Description id="desc">
+                ceci est une description de ce qui se passe 
+        </Description>
+        <Actions>
+            <Attaque_Defense_Soins>
+                <attaque id="attaque" class="button">Attaque</attaque>
+                <Defendre id="Defendre" class = "button">Defendre </Defendre>
+                <Soins id="soins" class = "button">Soins</Soins>
+            </Attaque_Defense_Soins>
+            <Sort_Info_pass>
+                <sort id="sort" class = "button">sort</sort>
+                <info id ="info" class="button">info</info>
+                <pass id="pass" class="button">pass</pass>
+            </Sort_Info_Soins>
+        </Actions>
+    </footer>
+</body>
