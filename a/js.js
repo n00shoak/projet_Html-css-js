@@ -157,7 +157,7 @@ D_mana_L = D_mana
 E_pv = 100;
 E_attack = 8;
 E_def = 0;
-E_speed = 6;
+E_speed = 8;
 //code stats
 E_hp = E_pv
 }
@@ -167,7 +167,7 @@ E_hp = E_pv
 F_pv = 100;
 F_attack = 8;
 F_def = 0;
-F_speed = 6;
+F_speed = 8;
 //code stats
 F_hp = E_pv
 }
@@ -178,14 +178,12 @@ F_hp = E_pv
 G_pv = 100;
 G_attack = 8;
 G_def = 0;
-G_speed = 6;
+G_speed = 8;
 //code stats
 G_hp = E_pv
 }
 
 }
-
-
 
 //var general :
 {
@@ -203,6 +201,10 @@ playerDEF = [A_def,B_def,C_def,D_def]
 playerSHI = [Ashield,Bshield,Cshield,Dshield,]
 
 ennemiHP = [E_hp,G_hp,F_hp]
+ennemi_E_Death = false
+ennemi_F_Death = false
+ennemi_G_Death = false
+
 
 playerPlaying =["paladin","witch","berserk","pirate"]
 
@@ -351,14 +353,13 @@ function turn(){
   {
     desc.innerHTML = "the ennemy atack now";
     setTimeout(() => {
-
-      playerHP[ Math.floor(Math.random() * 4)] -= E_attack
-      playerHP[ Math.floor(Math.random() * 4)] -= F_attack
-      playerHP[ Math.floor(Math.random() * 4)] -= G_attack
-
+      if (ennemi_E_Death == false){playerHP[ Math.floor(Math.random() * 4)] -= E_attack}
+      if (ennemi_F_Death == false){playerHP[ Math.floor(Math.random() * 4)] -= F_attack}
+      if (ennemi_G_Death == false){playerHP[ Math.floor(Math.random() * 4)] -= G_attack}
+  
     reset()
     endTurn()
-  }, 3000)
+    }, 3000)
   }
   
  }
@@ -425,21 +426,34 @@ function actualiseMana()
 
 } 
 
-function checkFoeDeath()
+function checkFoeDeath(ennemi_E_Death , ennemiSelectF , ennemi_G_Death , ennemiSelectE , ennemiSelectF , ennemiSelectG , hpEnnemiA , hpEnnemiB , hpEnnemiC , hpEnnemiGraphismeA , hpEnnemiGraphismeB , hpEnnemiGraphismeC ,)
 {
-  if (E_hp <= 0){
-    E_pv = E_pv + 25
-    E_hp = E_pv
+  console.log("check for death :")
 
-    E_attack = E_attack + 5
-    E_speed = E_speed - 1
-
-    A_hp = A_pv
-    B_hp = B_pv
-    C_hp = C_pv
-    D_hp = D_pv
-    
+  if (ennemiHP[0] <= 0){
+    console.log("mort ennemi haut")
+    ennemiSelectE.style.display = "none" ;
+    hpEnnemiA.style.display = "none" ;
+    hpEnnemiGraphismeA.style.display = "none" ;
+    ennemi_E_Death = true
   }
+
+  if (ennemiHP[1] <= 0){
+    console.log("mort ennemi centre")
+    ennemiSelectF.style.display = "none" ;
+    hpEnnemiB.style.display = "none" ;
+    hpEnnemiGraphismeB.style.display = "none" ;
+    ennemi_F_Death = true
+  }
+
+  if (ennemiHP[2] <= 0){
+    console.log("mort ennemi bas")
+    ennemiSelectG.style.display = "none" ;
+    hpEnnemiC.style.display = "none" ;
+    hpEnnemiGraphismeC.style.display = "none" ;
+    ennemi_G_Death = true
+  }
+
   actualiseHP()
 }
 
@@ -541,6 +555,11 @@ defendre.onclick = function()
       ShieldC.style.display = "block";
       ShieldD.style.display = "block";
       setTimeout(() => {ShieldA.style.display = "none";ShieldB.style.display = "none";ShieldC.style.display = "none";ShieldD.style.display = "none";}, 2200)
+      for (let i = 0; i < 4; i++) {
+        playerSHI[i] = playerSHI[i] + 1
+        console.log("i" + playerSHI[i])
+      }
+
     }
     else if(whoPlay == 2)
     {
@@ -644,7 +663,7 @@ info.onclick = function(){
 }
 
 // action on sort button input
-sort.onclick = function(){
+sort.onclick = function(){  
   //pladin spell
   if (whoPlay == 1){
     if (playerMNL[0] >= 50){
@@ -653,7 +672,7 @@ sort.onclick = function(){
 
       //rise allies defense
       for (let i = 0; i < 4; i++) {
-        playerSHI[i] = playerSHI[i] + 1
+        playerSHI[i] = playerSHI[i] + 2
         console.log("i" + playerSHI[i])
       }
 
